@@ -115,6 +115,18 @@
             </div>
         </section>
         
+        <div class="container">
+            <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid" novalidate>
+                <h4>Your booking:</h4>
+                
+                <input class="mail" placeholder="example@email.com" ng-model="reviewCtrl.review.author" type="email" required />
+                <input class="mail" placeholder="Optional comment" ng-model="reviewCtrl.review.body" type="email" required />
+
+                <input type="checkbox"><p>Get confirmation on email</p>
+
+                <button class="bookroom">BOOK ROOM</button>
+             </form>
+        </div>
 
         
     </div>

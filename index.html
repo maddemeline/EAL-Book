@@ -1,6 +1,9 @@
 <!DOCTYPE>
 <html ng-app="booking">
     <head>
+      <!----Meta data--->
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!----Bootstrap--->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <!----CSS------->
@@ -8,18 +11,20 @@
         <!----FONTS----->
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
     </head>
-    
-    <body ng-controller="BookingController as booking">
+    <!---------------------HEADER WITH EAL IMAGE------------------------>  
+    <header class="text-center">
+        <img src="logo.jpg" alt="EAL's Logo">
+    </header>
+
+        <body ng-controller="BookingController as booking">
 
     <!---------------------------CALENDAR------------------------------->  
     <div class="container">
-        <div class="row">
-        
-        
-        <section ng-controller="CalendarController as calendar">
-        <div class="col">
-        <h4>DECEMBER</h4>
-            <ul class="nav nav-pills">
+       <div class="row" ng-controller="CalendarController as calendar">
+                
+    <div class="col">
+       <br><br><h2 class="text-center">1. CHOOSE A DATE</h2><br><h5 class="text-center">- DECEMBER -</h5>
+            <ul class="nav nav-pills justify-content-center">
                 <li class="date-box" ng-class="{ active:calendar.isSelected(1) }"><a href ng-click="calendar.selectTab(1)">1</a></li>
                 <li class="date-box" ng-class="{ active:calendar.isSelected(2) }"><a href ng-click="calendar.selectTab(2)">2</a></li>
                 <li class="date-box" ng-class="{ active:calendar.isSelected(3) }"><a href ng-click="calendar.selectTab(3)">3</a></li>
@@ -28,7 +33,7 @@
                 <li class="date-box" ng-class="{ active:calendar.isSelected(6) }"><a href ng-click="calendar.selectTab(6)">6</a></li>
                 <li class="date-box" ng-class="{ active:calendar.isSelected(7) }"><a href ng-click="calendar.selectTab(7)">7</a></li>
             </ul>
-            <ul class="nav nav-pills">
+            <ul class="nav nav-pills justify-content-center">
                 <li class="date-box" ng-class="{ active:calendar.isSelected(8) }"><a href ng-click="calendar.selectTab(8)">8</a></li>
                 <li class="date-box" ng-class="{ active:calendar.isSelected(9) }"><a href ng-click="calendar.selectTab(9)">9</a></li>
                 <li class="date-box" ng-class="{ active:calendar.isSelected(10) }"><a href ng-click="calendar.selectTab(10)">10</a></li>
@@ -37,8 +42,7 @@
                 <li class="date-box" ng-class="{ active:calendar.isSelected(13) }"><a href ng-click="calendar.selectTab(13)">13</a></li>
                 <li class="date-box" ng-class="{ active:calendar.isSelected(14) }"><a href ng-click="calendar.selectTab(14)">14</a></li>
             </ul>
-            
-            <ul class="nav nav-pills">
+            <ul class="nav nav-pills justify-content-center">
                 <li class="date-box" ng-class="{ active:calendar.isSelected(15) }"><a href ng-click="calendar.selectTab(15)">15</a></li>
                 <li class="date-box" ng-class="{ active:calendar.isSelected(16) }"><a href ng-click="calendar.selectTab(16)">16</a></li>
                 <li class="date-box" ng-class="{ active:calendar.isSelected(17) }"><a href ng-click="calendar.selectTab(17)">17</a></li>
@@ -48,16 +52,16 @@
                 <li class="date-box" ng-class="{ active:calendar.isSelected(21) }"><a href ng-click="calendar.selectTab(21)">21</a></li>
             </ul>
             </div>
-            
-        
-        
+              
         
         <!----------------------------SHOW AVAILABLE ROOMS------------------------------------->
         <div class="col">
+         <br><br><h2 class="text-center">2. CHOOSE THE TIME</h2><br>
+           
             <div ng-show="calendar.isSelected(1)">
                 <h5>Available rooms - 01/12/17</h5>
                 <div class="av-rooms" ng-repeat="product in booking.products" ng-hide="product.booked"> 
-                    {{product.no}}
+                   <h5 class="av">{{product.no}}</h5> 
                     <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
                     {{hour.name}}
                     </div>
@@ -68,7 +72,7 @@
             <div ng-show="calendar.isSelected(2)" ng-controller="Day2Controller as day2">
                 <h5>Available rooms - 02/12/17</h5>
                 <div class="av-rooms" ng-repeat="product in day2.products" ng-hide="product.booked"> 
-                    {{product.no}}
+                    <h5 class="av">{{product.no}}</h5>
                     <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
                     {{hour.name}}
                      </div>
@@ -78,7 +82,7 @@
             <div ng-show="calendar.isSelected(3)" ng-controller="Day3Controller as day3">
                 <h5>Available rooms - 03/12/17</h5>
                 <div class="av-rooms" ng-repeat="product in day3.products" ng-hide="product.booked"> 
-                    {{product.no}}
+                    <h5 class="av">{{product.no}}</h5>
                     <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
                     {{hour.name}}
                      </div>
@@ -88,7 +92,7 @@
             <div ng-show="calendar.isSelected(4)" ng-controller="Day4Controller as day4">
                 <h5>Available rooms - 04/12/17</h5>
                 <div class="av-rooms" ng-repeat="product in day4.products" ng-hide="product.booked"> 
-                    {{product.no}}
+                    <h5 class="av">{{product.no}}</h5>
                     <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
                     {{hour.name}}
                      </div>
@@ -98,7 +102,7 @@
             <div ng-show="calendar.isSelected(5)" ng-controller="Day5Controller as day5">
                 <h5>Available rooms - 05/12/17</h5>
                 <div class="av-rooms" ng-repeat="product in day5.products" ng-hide="product.booked"> 
-                    {{product.no}}
+                    <h5 class="av">{{product.no}}</h5>
                     <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
                     {{hour.name}}
                      </div>
@@ -113,23 +117,29 @@
                 <p>The rooms cannot be pre-booked during weekends</p>
             </div>
             </div>
-        </section>
         
-        <div class="container">
-            <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid" novalidate>
-                <h4>Your booking:</h4>
+        </div>
+    
+        
+              <!----------------------------BOOKING FORM/ SEND YOUR BOOKING------------------------------------->   
+          <br><br>
+                   <div class="col-md-6 justify-content-center">
+           <h2 class="text-center">3. SEND YOUR BOOKING</h2><br>
+            <form name="reviewForm" class="text-center" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid" novalidate>
+                <h6 class="text-center">Your booking: 4/12/17 kl. 13-16, Room B1.06</h6>
                 
-                <input class="mail" placeholder="example@email.com" ng-model="reviewCtrl.review.author" type="email" required />
-                <input class="mail" placeholder="Optional comment" ng-model="reviewCtrl.review.body" type="email" required />
+                <input class="mail" placeholder="example@email.com" ng-model="reviewCtrl.review.author" type="email" required /><br><br>
+                <input class="mail" placeholder="Optional comment" ng-model="reviewCtrl.review.body" type="email" required /><br><br>
 
-                <input type="checkbox"><p>Get confirmation on email</p>
-
+                <section class="row justify-content-around">
+                <p><input type="checkbox">Get confirmation on email</p>
                 <button class="bookroom">BOOK ROOM</button>
+                </section>
              </form>
         </div>
-
+          
         
-    </div>
+   
     </div>
 
      

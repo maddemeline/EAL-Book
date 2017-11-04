@@ -51,93 +51,163 @@
                 <li class="date-box" ng-class="{ active:calendar.isSelected(20) }"><a href ng-click="calendar.selectTab(20)">20</a></li>
                 <li class="date-box" ng-class="{ active:calendar.isSelected(21) }"><a href ng-click="calendar.selectTab(21)">21</a></li>
             </ul>
+            <ul class="nav nav-pills justify-content-center">
+                <li class="date-box" ng-class="{ active:calendar.isSelected(22) }"><a href ng-click="calendar.selectTab(22)">22</a></li>
+                <li class="date-box" ng-class="{ active:calendar.isSelected(23) }"><a href ng-click="calendar.selectTab(23)">23</a></li>
+                <li class="date-box" ng-class="{ active:calendar.isSelected(24) }"><a href ng-click="calendar.selectTab(24)">24</a></li>
+                <li class="date-box" ng-class="{ active:calendar.isSelected(25) }"><a href ng-click="calendar.selectTab(25)">25</a></li>
+                <li class="date-box" ng-class="{ active:calendar.isSelected(26) }"><a href ng-click="calendar.selectTab(26)">26</a></li>
+                <li class="date-box" ng-class="{ active:calendar.isSelected(27) }"><a href ng-click="calendar.selectTab(27)">27</a></li>
+                <li class="date-box" ng-class="{ active:calendar.isSelected(28) }"><a href ng-click="calendar.selectTab(28)">28</a></li>
+            </ul>
             </div>
               
         
         <!----------------------------SHOW AVAILABLE ROOMS------------------------------------->
         <div class="col">
-         <br><br><h2 class="text-center">2. CHOOSE THE TIME</h2><br>
-           
-            <div ng-show="calendar.isSelected(1)">
-                <h5>Available rooms - 01/12/17</h5>
-                <div class="av-rooms" ng-repeat="product in booking.products" ng-hide="product.booked"> 
-                   <h5 class="av">{{product.no}}</h5> 
-                    <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
-                    {{hour.name}}
+             <br><br><h2 class="text-center">2. CHOOSE THE TIME</h2><br>
+
+                <div ng-show="calendar.isSelected(1)">
+                    <h5>Available rooms - 01/12/17</h5>
+                    <div class="av-rooms" ng-repeat="product in booking.products" ng-hide="product.booked"> 
+                       <h5 class="av">{{product.no}}</h5> 
+                        <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
+                        {{hour.name}}
+                        </div>
+                    </div>
+
+                </div>                   
+
+                <div ng-show="calendar.isSelected(2)" ng-controller="Day2Controller as day2">
+                    <h5>Available rooms - 02/12/17</h5>
+                    <div class="av-rooms" ng-repeat="product in day2.products" ng-hide="product.booked"> 
+                        <h5 class="av">{{product.no}}</h5>
+                        <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
+                        {{hour.name}}
+                         </div>
                     </div>
                 </div>
 
-            </div>                   
 
-            <div ng-show="calendar.isSelected(2)" ng-controller="Day2Controller as day2">
-                <h5>Available rooms - 02/12/17</h5>
-                <div class="av-rooms" ng-repeat="product in day2.products" ng-hide="product.booked"> 
-                    <h5 class="av">{{product.no}}</h5>
-                    <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
-                    {{hour.name}}
-                     </div>
+                <div ng-show="calendar.isSelected(3)" ng-controller="Day3Controller as day3">
+                    <h5>Available rooms - 03/12/17</h5>
+                    <div class="av-rooms" ng-repeat="product in day3.products" ng-hide="product.booked"> 
+                        <h5 class="av">{{product.no}}</h5>
+                        <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
+                        {{hour.name}}
+                         </div>
+                    </div>
                 </div>
-            </div>
 
-            <div ng-show="calendar.isSelected(3)" ng-controller="Day3Controller as day3">
-                <h5>Available rooms - 03/12/17</h5>
-                <div class="av-rooms" ng-repeat="product in day3.products" ng-hide="product.booked"> 
-                    <h5 class="av">{{product.no}}</h5>
-                    <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
-                    {{hour.name}}
-                     </div>
+                <div ng-show="calendar.isSelected(4)" ng-controller="Day4Controller as day4">
+                    <h5>Available rooms - 04/12/17</h5>
+                    <div class="av-rooms" ng-repeat="product in day4.products" ng-hide="product.booked"> 
+                        <h5 class="av">{{product.no}}</h5>
+                        <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
+                        {{hour.name}}
+                         </div>
+                    </div>
                 </div>
-            </div>
 
-            <div ng-show="calendar.isSelected(4)" ng-controller="Day4Controller as day4">
-                <h5>Available rooms - 04/12/17</h5>
-                <div class="av-rooms" ng-repeat="product in day4.products" ng-hide="product.booked"> 
-                    <h5 class="av">{{product.no}}</h5>
-                    <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
-                    {{hour.name}}
-                     </div>
+                <div ng-show="calendar.isSelected(5)" ng-controller="Day5Controller as day5">
+                    <h5>Available rooms - 05/12/17</h5>
+                    <div class="av-rooms" ng-repeat="product in day5.products" ng-hide="product.booked"> 
+                        <h5 class="av">{{product.no}}</h5>
+                        <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
+                        {{hour.name}}
+                         </div>
+                    </div>
                 </div>
-            </div>
 
-            <div ng-show="calendar.isSelected(5)" ng-controller="Day5Controller as day5">
-                <h5>Available rooms - 05/12/17</h5>
-                <div class="av-rooms" ng-repeat="product in day5.products" ng-hide="product.booked"> 
-                    <h5 class="av">{{product.no}}</h5>
-                    <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
-                    {{hour.name}}
-                     </div>
+                <div class="av-rooms" ng-show="calendar.isSelected(6)" >
+                    <p>The rooms cannot be pre-booked during weekends</p>
                 </div>
-            </div>
 
-            <div class="av-rooms" ng-show="calendar.isSelected(6)">
-                <p>The rooms cannot be pre-booked during weekends</p>
-            </div>
+                <div class="av-rooms" ng-show="calendar.isSelected(7)">
+                    <p>The rooms cannot be pre-booked during weekends</p>
+                </div>
+                
+                <div class="av-rooms" ng-show="calendar.isSelected(8)" ng-controller="Day8Controller as day8">
+                    <h5>Available rooms - 08/12/17</h5>
+                    <div class="av-rooms" ng-repeat="product in day8.products" ng-hide="product.booked"> 
+                        <h5 class="av">{{product.no}}</h5>
+                        <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
+                        {{hour.name}}
+                        </div>
+                    </div>                  
+                </div>
+                
+                <div class="av-rooms" ng-show="calendar.isSelected(9)" ng-controller="Day9Controller as day9">
+                    <h5>Available rooms - 09/12/17</h5>
+                    <div class="av-rooms" ng-repeat="product in day9.products" ng-hide="product.booked"> 
+                        <h5 class="av">{{product.no}}</h5>
+                        <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
+                        {{hour.name}}
+                        </div>
+                    </div>  
+                </div>
+                
+                <div class="av-rooms" ng-show="calendar.isSelected(10)" ng-controller="Day10Controller as day10">
+                    <h5>Available rooms - 10/12/17</h5>
+                    <div class="av-rooms" ng-repeat="product in day10.products" ng-hide="product.booked"> 
+                        <h5 class="av">{{product.no}}</h5>
+                        <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
+                        {{hour.name}}
+                        </div>
+                    </div>  
+                </div>
+                
+                <div class="av-rooms" ng-show="calendar.isSelected(11)" ng-controller="Day11Controller as day11">
+                    <h5>Available rooms - 11/12/17</h5>
+                    <div class="av-rooms" ng-repeat="product in day11.products" ng-hide="product.booked"> 
+                        <h5 class="av">{{product.no}}</h5>
+                        <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
+                        {{hour.name}}
+                        </div>
+                    </div>  
+                </div>
+                
+                <div class="av-rooms" ng-show="calendar.isSelected(12)" ng-controller="Day12Controller as day12">
+                    <h5>Available rooms - 12/12/17</h5>
+                    <div class="av-rooms" ng-repeat="product in day12.products" ng-hide="product.booked"> 
+                        <h5 class="av">{{product.no}}</h5>
+                        <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
+                        {{hour.name}}
+                        </div>
+                    </div> 
+                </div>
+                
+                <div class="av-rooms" ng-show="calendar.isSelected(13)">
+                    <p>The rooms cannot be pre-booked during weekends</p>
+                </div>
 
-            <div class="av-rooms" ng-show="calendar.isSelected(7)">
-                <p>The rooms cannot be pre-booked during weekends</p>
-            </div>
+                <div class="av-rooms" ng-show="calendar.isSelected(14)">
+                    <p>The rooms cannot be pre-booked during weekends</p>
+                </div>
+                
+
+
             </div>
         
         </div>
-    
         
-              <!----------------------------BOOKING FORM/ SEND YOUR BOOKING------------------------------------->   
-          <br><br>
-                   <div class="col-md-6 justify-content-center">
+              <!----------------------------BOOKING FORM/ SEND YOUR BOOKING------------------------->   
+        <br><br><br>
+        <div class="col-md-6 justify-content-center">
            <h2 class="text-center">3. SEND YOUR BOOKING</h2><br>
-            <form name="reviewForm" class="text-center" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid" novalidate>
-                <h6 class="text-center">Your booking: 4/12/17 kl. 13-16, Room B1.06</h6>
+            <form name="bookForm" action="" class="text-center" ng-controller="BookController as bookCtrl" ng-submit="bookForm.$valid" novalidate>
+                <h6 class="text-center">Your booking: 4/12/17 kl. 13-16, Room B.211</h6>
                 
-                <input class="mail" placeholder="example@email.com" ng-model="reviewCtrl.review.author" type="email" required /><br><br>
-                <input class="mail" placeholder="Optional comment" ng-model="reviewCtrl.review.body" type="email" required /><br><br>
+                <input class="mail" placeholder="example@email.com" ng-model="bookCtrl.book.author" type="email" required /><br><br>
+                <input class="mail" placeholder="Optional comment"/><br><br> 
 
                 <section class="row justify-content-around">
                 <p><input type="checkbox">Get confirmation on email</p>
-                <button class="bookroom">BOOK ROOM</button>
+                <button class="bookroom" onclick="buba()">BOOK ROOM</button>
+                <script>function buba() {document.load("demo").innerHTML = "Hello World";}</script>
                 </section>
              </form>
         </div>
-          
         
    
     </div>

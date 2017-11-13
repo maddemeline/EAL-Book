@@ -68,56 +68,61 @@
              <br><br><h2 class="text-center">2. CHOOSE THE TIME</h2><br>
 
                 <div ng-show="calendar.isSelected(1)">
-                    <h5>Available rooms - 01/12/17</h5>
-                    <div class="av-rooms" ng-repeat="product in booking.products" ng-hide="product.booked"> 
-                       <h5 class="av">{{product.no}}</h5> 
-                        <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
-                        {{hour.name}}
-                        </div>
-                    </div>
+                   <h5>Available rooms (in green) - 01/12/17.</h5>
+                <div class="av-rooms" ng-repeat="product in booking.products" ng-hide="product.booked"> 
+                   <h5 class="av">{{product.no}}</h5> 
+                    <button onclick="myFunction()" class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
+                    {{hour.name}}
+                    </button>
+                </div><br>
+                <h6 id="bookit"></h6>
 
-                </div>                   
+            </div>                   
 
                 <div ng-show="calendar.isSelected(2)" ng-controller="Day2Controller as day2">
-                    <h5>Available rooms - 02/12/17</h5>
-                    <div class="av-rooms" ng-repeat="product in day2.products" ng-hide="product.booked"> 
-                        <h5 class="av">{{product.no}}</h5>
-                        <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
-                        {{hour.name}}
-                         </div>
-                    </div>
-                </div>
+                  <h5>Available rooms (in green) - 02/12/17</h5>
+                <div class="av-rooms" ng-repeat="product in day2.products" ng-hide="product.booked"> 
+                    <h5 class="av">{{product.no}}</h5>
+                   <button onclick="myFunction2()" class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
+                    {{hour.name}}
+                    </button>
+                </div><br>
+                <h6 id="bookit2"></h6>
+            </div>
 
 
                 <div ng-show="calendar.isSelected(3)" ng-controller="Day3Controller as day3">
-                    <h5>Available rooms - 03/12/17</h5>
-                    <div class="av-rooms" ng-repeat="product in day3.products" ng-hide="product.booked"> 
-                        <h5 class="av">{{product.no}}</h5>
-                        <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
-                        {{hour.name}}
-                         </div>
-                    </div>
-                </div>
+                   <h5>Available rooms (in green) - 03/12/17</h5>
+                <div class="av-rooms" ng-repeat="product in day3.products" ng-hide="product.booked"> 
+                    <h5 class="av">{{product.no}}</h5>
+                    <button onclick="myFunction3()" class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
+                    {{hour.name}}
+                    </button>
+                </div><br>
+                <h6 id="bookit3"></h6>
+            </div>
 
                 <div ng-show="calendar.isSelected(4)" ng-controller="Day4Controller as day4">
-                    <h5>Available rooms - 04/12/17</h5>
-                    <div class="av-rooms" ng-repeat="product in day4.products" ng-hide="product.booked"> 
-                        <h5 class="av">{{product.no}}</h5>
-                        <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
-                        {{hour.name}}
-                         </div>
-                    </div>
-                </div>
+                   <h5>Available rooms (in green) - 04/12/17</h5>
+                <div class="av-rooms" ng-repeat="product in day4.products" ng-hide="product.booked"> 
+                    <h5 class="av">{{product.no}}</h5>
+                    <button onclick="myFunction4()" class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
+                    {{hour.name}}
+                    </button>
+                </div><br>
+                <h6 id="bookit4"></h6>
+            </div>
 
                 <div ng-show="calendar.isSelected(5)" ng-controller="Day5Controller as day5">
-                    <h5>Available rooms - 05/12/17</h5>
-                    <div class="av-rooms" ng-repeat="product in day5.products" ng-hide="product.booked"> 
-                        <h5 class="av">{{product.no}}</h5>
-                        <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
-                        {{hour.name}}
-                         </div>
-                    </div>
-                </div>
+                   <h5>Available rooms (in green) - 05/12/17</h5>
+                <div class="av-rooms" ng-repeat="product in day5.products" ng-hide="product.booked"> 
+                    <h5 class="av">{{product.no}}</h5>
+                     <button onclick="myFunction5()" class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
+                    {{hour.name}}
+                    </button>
+                </div><br>
+                <h6 id="bookit5"></h6>
+            </div>
 
                 <div class="av-rooms" ng-show="calendar.isSelected(6)" >
                     <p>The rooms cannot be pre-booked during weekends</p>
@@ -129,53 +134,58 @@
                 
                 <div class="av-rooms" ng-show="calendar.isSelected(8)" ng-controller="Day8Controller as day8">
                     <h5>Available rooms - 08/12/17</h5>
-                    <div class="av-rooms" ng-repeat="product in day8.products" ng-hide="product.booked"> 
-                        <h5 class="av">{{product.no}}</h5>
-                        <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
-                        {{hour.name}}
-                        </div>
-                    </div>                  
-                </div>
+                     <div class="av-rooms" ng-repeat="product in day8.products" ng-hide="product.booked"> 
+                    <h5 class="av">{{product.no}}</h5>
+                     <button onclick="myFunction8()" class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
+                    {{hour.name}}
+                    </button>
+                </div><br>
+                <h6 id="bookit8"></h6>
+            </div>
                 
                 <div class="av-rooms" ng-show="calendar.isSelected(9)" ng-controller="Day9Controller as day9">
-                    <h5>Available rooms - 09/12/17</h5>
-                    <div class="av-rooms" ng-repeat="product in day9.products" ng-hide="product.booked"> 
-                        <h5 class="av">{{product.no}}</h5>
-                        <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
-                        {{hour.name}}
-                        </div>
-                    </div>  
-                </div>
+                    <h5>Available rooms (in green) - 09/12/17</h5>
+                     <div class="av-rooms" ng-repeat="product in day9.products" ng-hide="product.booked"> 
+                    <h5 class="av">{{product.no}}</h5>
+                     <button onclick="myFunction9()" class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
+                    {{hour.name}}
+                    </button>
+                </div><br>
+                <h6 id="bookit9"></h6>
+            </div>
                 
                 <div class="av-rooms" ng-show="calendar.isSelected(10)" ng-controller="Day10Controller as day10">
-                    <h5>Available rooms - 10/12/17</h5>
-                    <div class="av-rooms" ng-repeat="product in day10.products" ng-hide="product.booked"> 
-                        <h5 class="av">{{product.no}}</h5>
-                        <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
-                        {{hour.name}}
-                        </div>
-                    </div>  
-                </div>
+                    <h5>Available rooms (in green) - 10/12/17</h5>
+                     <div class="av-rooms" ng-repeat="product in day10.products" ng-hide="product.booked"> 
+                    <h5 class="av">{{product.no}}</h5>
+                     <button onclick="myFunction10()" class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
+                    {{hour.name}}
+                    </button>
+                </div><br>
+                <h6 id="bookit10"></h6>
+            </div>
                 
                 <div class="av-rooms" ng-show="calendar.isSelected(11)" ng-controller="Day11Controller as day11">
-                    <h5>Available rooms - 11/12/17</h5>
-                    <div class="av-rooms" ng-repeat="product in day11.products" ng-hide="product.booked"> 
-                        <h5 class="av">{{product.no}}</h5>
-                        <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
-                        {{hour.name}}
-                        </div>
-                    </div>  
-                </div>
+                    <h5>Available rooms (in green) - 11/12/17</h5>
+                     <div class="av-rooms" ng-repeat="product in day11.products" ng-hide="product.booked"> 
+                    <h5 class="av">{{product.no}}</h5>
+                     <button onclick="myFunction11()" class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
+                    {{hour.name}}
+                    </button>
+                </div><br>
+                <h6 id="bookit11"></h6>
+            </div>
                 
                 <div class="av-rooms" ng-show="calendar.isSelected(12)" ng-controller="Day12Controller as day12">
-                    <h5>Available rooms - 12/12/17</h5>
-                    <div class="av-rooms" ng-repeat="product in day12.products" ng-hide="product.booked"> 
-                        <h5 class="av">{{product.no}}</h5>
-                        <div class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
-                        {{hour.name}}
-                        </div>
-                    </div> 
-                </div>
+                    <h5>Available rooms (in green) - 12/12/17</h5>
+                     <div class="av-rooms" ng-repeat="product in day8.products" ng-hide="product.booked"> 
+                    <h5 class="av">{{product.no}}</h5>
+                     <button onclick="myFunction12()" class="av-hours" ng-repeat="hour in product.hours" ng-class="{ red:hour.booked }">
+                    {{hour.name}}
+                    </button>
+                </div><br>
+                <h6 id="bookit12"></h6>
+            </div>
                 
                 <div class="av-rooms" ng-show="calendar.isSelected(13)">
                     <p>The rooms cannot be pre-booked during weekends</p>
@@ -219,5 +229,55 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
     <!----Javascript----->
     <script src="app.js"></script>
+    
+    <script>
+function myFunction() {
+    document.getElementById("bookit").innerHTML = "You have chosen a time. Add more or continue with your booking in part 3";
+}
+
+function myFunction2() {
+    document.getElementById("bookit2").innerHTML = "You have chosen a time. Add more or continue with your booking in part 3";
+}
+        
+function myFunction3() {
+    document.getElementById("bookit3").innerHTML = "You have chosen a time. Add more or continue with your booking in part 3";
+}
+    
+function myFunction4() {
+    document.getElementById("bookit4").innerHTML = "You have chosen a time. Add more or continue with your booking in part 3";
+}
+        
+function myFunction5() {
+    document.getElementById("bookit5").innerHTML = "You have chosen a time. Add more or continue with your booking in part 3";
+}
+        
+function myFunction6() {
+    document.getElementById("bookit6").innerHTML = "You have chosen a time. Add more or continue with your booking in part 3";
+}
+        
+function myFunction7() {
+    document.getElementById("bookit7").innerHTML = "You have chosen a time. Add more or continue with your booking in part 3";
+}
+        
+function myFunction8() {
+    document.getElementById("bookit8").innerHTML = "You have chosen a time. Add more or continue with your booking in part 3";
+}
+        
+function myFunction9() {
+    document.getElementById("bookit9").innerHTML = "You have chosen a time. Add more or continue with your booking in part 3";
+}
+        
+function myFunction10() {
+    document.getElementById("bookit10").innerHTML = "You have chosen a time. Add more or continue with your booking in part 3";
+}
+        
+function myFunction11() {
+    document.getElementById("bookit11").innerHTML = "You have chosen a time. Add more or continue with your booking in part 3";
+}
+        
+function myFunction12() {
+    document.getElementById("bookit12").innerHTML = "You have chosen a time. Add more or continue with your booking in part 3";
+}
+    </script>
     </body>
 </html>

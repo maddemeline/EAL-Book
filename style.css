@@ -58,7 +58,7 @@ a:hover {
 
 .av {
     margin: 2px;
-    padding: 10px 15px 10px 15px;
+    padding: 8px 12px 8px 12px;
     background-color: #006e79;
     border-radius: 7px;
     display: inline-block;
@@ -74,8 +74,9 @@ a:hover {
 }
 
 .av-hours {
+    background-color: #fff;
     margin: 3px;
-    padding: 7px;
+    padding: 6px;
     border: solid green 2px;
     border-radius: 7px;
     display: inline-block;
@@ -85,7 +86,7 @@ a:hover {
 .red {
     color: red;
     margin: 3px;
-    padding: 7px;
+    padding: 6px;
     border: solid red 2px;
     border-radius: 7px;
     display: inline-block;
@@ -131,7 +132,7 @@ textarea.mail {
     text-align: center;
     height: 30px;
     width: 150px;
-    margin-left: 10px;
+    margin-left: 3px;
 }
 
 .justify-content-around {
